@@ -21,8 +21,29 @@ Its a javascript run time, run outside the browser build on v8 chrome engine, no
     
     count()
 
+//clouser used cases
+for(var i = 0;i<3;i++){
+  ((x)=>{console.log(x)})(i)
+}
 
 
+
+# Function Currying
+Currying is a technique in function programing where function is transfer into sequnce of nested function and where each function carrying single arugment; 
+
+function curryAdd(a){
+   return function a(b){
+      return function b(c){
+        return a+b+c
+       }
+   }
+}
+
+console.log(curryAdd(1)(2)(3))
+
+
+# Function Composition 
+Its a technique in function programing where multiple function are combined to form /create new function
 
 # interviewPreparation-2025
 

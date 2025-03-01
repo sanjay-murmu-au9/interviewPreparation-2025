@@ -2,7 +2,29 @@ Nodejs
 1. what is nodejs
 Its a javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture.
 
- 2. What is closure?
+2. How is Node.js different from JavaScript in the browser?
+:- Js:- run in browser, Can access: access to local Browser & uses: UI intraction
+ Nodejs: run outside the browser, can access:- local file OS access to databases Uses:- 
+
+3. What is NPM
+   Its node packages managers uses for packages install,update.
+4. How do you create a simple Node.js server?
+   const port = process.env.port || 3000
+  const http = require('http')
+  const http.create((req,res)=>{
+    req(200,{"Content-Type":"text/javascript"})
+    res.end('')
+ })
+
+ http.listen(port,(req,res)=>{
+   console.log(`Server is listening on ${Port}`)
+})
+
+
+ 5. What is the Event Loop in Node.js?
+  :- Event loop allow multiple req handle async without blocking the main threads.
+
+ 3. What is closure?
     :- Function remember outer scope varaible event the execution has completed, even outer func is excuted.
     eg :-
    //closure

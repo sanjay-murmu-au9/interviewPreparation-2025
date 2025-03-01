@@ -60,10 +60,11 @@ example for the above
  
 8. How to handle files in Node.js?
    const fs = require('fs');
-   const data = fs.writeFile('text.file','Hello world',err =>{
+   const data = fs.readFile('file.txt','utf8',(err,data ) => {
     if(err) throw new Error('something went wrong!!')
-    console.log('file updated successfully!')
+    console.log(data)
    })
+
 
  3. What is closure?
     :- Function remember outer scope varaible event the execution has completed, even outer func is excuted.

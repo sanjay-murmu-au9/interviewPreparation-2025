@@ -24,6 +24,44 @@ Its a javascript run time, run outside the browser build on v8 chrome engine, no
  5. What is the Event Loop in Node.js?
   :- Event loop allow nodejs handle mutliple request async without blocking the main thread.
 
+//none blocking example
+console.log('start')
+setTimeout(()=>{
+  console.log('setTime out!!!')
+},2000)
+
+console.log("end task!!!")
+
+6. What are Callbacks, Promises, and Async/Await in Node.js?
+ callBack :- func pass as arguments eg:- fs.readFile(file,callback)
+ Promises:- handle async task :- fetch().then().catch()
+ Async/Await:- Clear way to handle Promise; Eg: await fetch
+
+example for the above
+ callback
+ fs.writeFile('file.text','hello world',(err)=>{
+  if(err) throw new Error('something went wrong!!')
+  console.log('successfully data write!!')
+  })
+
+ // Promise
+ const fechdata().then(res=>{console.log('done!!')}).catch('error')
+
+ // async await
+ const fetchData = async() =>{
+   try{
+    const response = await.fetc("https://api.example.com/data");
+    const data = await response.json();
+    console.log('Data!!!',data)
+   }catch(err){
+    console.error('something went wrong!!')
+   }
+ }
+ 
+8. How to handle files in Node.js?
+   const fs = require('fs');
+   
+
  3. What is closure?
     :- Function remember outer scope varaible event the execution has completed, even outer func is excuted.
     eg :-

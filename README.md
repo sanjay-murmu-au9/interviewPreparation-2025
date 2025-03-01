@@ -85,7 +85,13 @@ example for the above
   })
 
 10. What are Streams in Node.js?
- 
+ :- Streams handle data in chunk to improve performances;
+Example:
+ const fs = require('fs')
+ const readStream = fs.createReadStream('file.txt','utf8');
+ readStram.on('data',(chunk)=> {
+   console.log('new Chunck:',chunk);
+  })
 
  3. What is closure?
     :- Function remember outer scope varaible event the execution has completed, even outer func is excuted.

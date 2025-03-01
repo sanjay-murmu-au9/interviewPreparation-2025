@@ -1,10 +1,10 @@
 Nodejs
 1. what is nodejs
-Its a javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture.
+Its a cross platform javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture. opensourch.
 
 2. How is Node.js different from JavaScript in the browser?
-:- Js:- run in browser, Can access: access to local Browser & uses: UI intraction
- Nodejs: run outside the browser, can access:- local file OS access to databases Uses:- 
+:- Js:- run in browser, Can access: access to local storage,DOM & uses: UI intraction
+ Nodejs: run outside the browser on server, can access:- local file OS access to databases Uses:- 
 
 3. What is NPM
    Its node packages managers uses for packages install,update.

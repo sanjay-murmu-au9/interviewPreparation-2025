@@ -65,6 +65,27 @@ example for the above
     console.log(data)
    })
 
+9 What is Middleware in Express.js?
+ : middleware in Express is its has access to req,res before sending it to FE, which is usally used for authenticate,
+
+  const express = require('express')
+  const app = express();
+
+  app.use((req,res,next)=>{
+  console.log('middleware executes')
+   next()
+  })
+
+  app.use('/route',(req,res)=>{
+   consle.log('routess')
+  })
+
+  app.listen(port,()=>{
+    console.log(`app listing on ${port}`)
+  })
+
+10. What are Streams in Node.js?
+ 
 
  3. What is closure?
     :- Function remember outer scope varaible event the execution has completed, even outer func is excuted.

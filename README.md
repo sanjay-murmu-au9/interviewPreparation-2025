@@ -22,7 +22,7 @@ Its a javascript run time, run outside the browser build on v8 chrome engine, no
 
 
  5. What is the Event Loop in Node.js?
-  :- Event loop allow multiple req handle async without blocking the main threads.
+  :- Event loop allow nodejs handle mutliple request async without blocking the main thread.
 
  3. What is closure?
     :- Function remember outer scope varaible event the execution has completed, even outer func is excuted.

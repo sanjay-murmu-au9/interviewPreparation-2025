@@ -116,6 +116,38 @@ for(var i = 0;i<3;i++){
   ((x)=>{console.log(x)})(i)
 }
 
+//Practicle use case of clousure;
+function bankAccount(initialAmount) {
+  //initial anount;
+  let balance = initialAmount; // private var;
+  
+  return {
+    deposite: function(amount){
+      balance+=amount;
+    },
+    
+    withDraw: function(amount){
+        if(balance < amount){
+          console.log(`Insufficient ${balance}`)
+          return;
+        }
+        balance+= amount
+        console.log(`You have ${balance} left in your account`)
+    },
+    
+    currBalance(){
+      console.log(`YOu have ${balance} in your current account!!`)
+    }
+    
+    
+  }
+  
+}
+
+const myAccount = bankAccount(100);
+myAccount.deposite(200);
+myAccount.withDraw(500);
+myAccount.currBalance();
 
 
 # Function Currying

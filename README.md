@@ -92,9 +92,8 @@ Example:
  readStram.on('data',(chunk)=> {
    console.log('new Chunck:',chunk);
   })
-
  3. What is closure?
-    :- Function remember outer scope varaible event the execution has completed, even outer func is excuted.
+    :-A closure is a func that remember the variable from its outer scope, event after the outer func has finished executing.
     eg :-
    //closure
     function outerFunction(){
@@ -108,9 +107,9 @@ Example:
     }
     
     const count = outerFunction()
-    count()
+    count() // 1
     
-    count()
+    count() //2
 
 //clouser used cases
 for(var i = 0;i<3;i++){

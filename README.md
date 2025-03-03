@@ -166,6 +166,20 @@ console.log(curryAdd(1)(2)(3))
 
 # Function Composition 
 Its a technique in function programing where multiple function are combined to form /create new function
+or 
+Istead of writing big nested func Function composition transfer into more readable,clearer,one task one func and that one single task func can be reusable;
+
+ex:- 
+ Suppose you want to double a number and then add 5 to it.
+function double(num){
+ return num * 2
+}
+function addFive(num){
+  return num+5
+}
+
+ console.log(addFive(double(5)));
+ 
 
 # interviewPreparation-2025
 

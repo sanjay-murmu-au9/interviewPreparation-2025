@@ -269,6 +269,40 @@ function addFive(num){
  console.log(withTax(100, 2)); // Output: 220
 console.log(withTax(50, 3));  // Output: 165
 
+# Higher-Order Function(HOF) in javascript
+HOF take another function as argument and return a result.
+
+function double(num){
+ return x*2;
+}
+function processNumber(func,num){
+  return func(num);
+}
+console.log(processNumber(double,5)) //Output: 10;
+
+# Debouncing & Throttling (Event Optimization)
+Imagine you’re typing in a search box, and after every keystroke, a function makes an API request to get results.
+
+🚨 Problem: Too many function calls happen too quickly, slowing down the app and overloading the server.
+
+💡 Solution? We use Debouncing and Throttling to control how often a function executes.
+
+:- Debouncing delay the function execution untill the user stops triggering the events.
+
+function debounce(func,delay){
+  return function (...args){
+    clearTimeout(timer);
+    timer = setTimeout(() => func(...args),delay)
+  }
+}
+
+function searchQuery(){
+ console.log('Featching search results....')
+}
+
+const debounceSearch = debounce(searchQuery,5000)
+
+
 # interviewPreparation-2025
 
 SYSTEM DESIGN QUESTION:-

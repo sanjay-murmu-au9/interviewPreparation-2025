@@ -1,3 +1,79 @@
+Here’s an advanced JavaScript concept list for interview preparation:
+
+1. Advanced Functions & Closures
+Closures and practical use cases
+IIFE (Immediately Invoked Function Expressions)
+Function Currying
+Function Composition
+Memoization
+Partial Application
+Higher-Order Functions
+Debouncing & Throttling (Event Optimization)
+2. Asynchronous JavaScript
+Event Loop & Call Stack
+Microtasks & Macrotasks (Job Queue vs Task Queue)
+Promises (Chaining, Error Handling, Combinators - Promise.all, Promise.race)
+Async/Await (Error Handling & Performance Considerations)
+Web Workers & Service Workers
+Fetch API & Axios
+Event Delegation
+3. JavaScript Object & Prototype System
+Prototype & Prototypal Inheritance
+__proto__ vs prototype
+Object.create() and Object Inheritance
+Shallow vs Deep Copying (Object.assign(), Spread, and structuredClone)
+Object.freeze(), Object.seal(), Object.defineProperty()
+Garbage Collection & Memory Leaks
+4. JavaScript Design Patterns
+Module Pattern (CommonJS, ES6 Modules, IIFE)
+Singleton Pattern
+Factory Pattern
+Observer Pattern (EventEmitter, Pub-Sub)
+Prototype Pattern
+Decorator Pattern
+Strategy Pattern
+5. Modern JavaScript (ES6+ Concepts)
+Destructuring & Spread/Rest Operators
+Template Literals
+Arrow Functions (this behavior)
+Optional Chaining (?.) & Nullish Coalescing (??)
+Tagged Templates
+Set, Map, WeakSet, WeakMap
+Symbol & Its Use Cases
+6. Advanced DOM Concepts
+Shadow DOM & Web Components
+MutationObserver API
+IntersectionObserver API (Lazy Loading)
+Custom Events (dispatchEvent())
+Content Security Policy (CSP) Considerations
+7. Performance Optimization
+Repaints & Reflows (Minimizing DOM Manipulations)
+Lazy Loading & Code Splitting
+WebAssembly (WASM) Overview
+Efficient Event Listeners
+Virtual DOM Concept
+8. Security in JavaScript
+Cross-Site Scripting (XSS) & Prevention
+Cross-Site Request Forgery (CSRF)
+CORS (Cross-Origin Resource Sharing)
+JSON Web Tokens (JWT) & Authentication
+9. Advanced Event Handling
+Event Bubbling & Capturing
+Event Propagation & Stop Propagation
+Custom Event Handling (CustomEvent API)
+10. JavaScript Internals & Compilation
+How JavaScript Code is Executed (Parsing, Compilation, Execution)
+JIT Compilation (V8 Engine Concepts)
+AST (Abstract Syntax Tree) in JavaScript
+Tail Call Optimization (TCO)
+11. Web APIs & Browser Concepts
+WebSockets & Server-Sent Events
+BroadcastChannel API
+IndexedDB & LocalStorage Optimization
+Clipboard API
+File API & Drag and Drop
+
+
 Nodejs
 1. what is nodejs
 Its a cross platform javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture. opensourch.

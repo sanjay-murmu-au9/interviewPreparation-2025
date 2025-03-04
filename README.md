@@ -179,7 +179,19 @@ function addFive(num){
 }
 
  console.log(addFive(double(5)));
- 
+
+ # Partial Application in JS
+ :- functinal programming techinque where we fix some arguments of a function in advance with few paraments
+ ex:- Pizza you decide type of pizza:'Margherita';
+ later you specify size and toppings
+ function totalCost(price,quantity,tax){
+  return price * quantity * (1+ tax)
+ }
+
+ //partial apply tax
+ const withTax = (price,quantity) => totalCost(price,quantity,0.1);
+ console.log(withTax(100, 2)); // Output: 220
+console.log(withTax(50, 3));  // Output: 165
 
 # interviewPreparation-2025
 

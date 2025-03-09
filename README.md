@@ -125,7 +125,59 @@ const obj = {
 
 obj.greet();
  Here in lexical scope this refered as object bcs function is called as methods; Lexical scope affect variable looksup but doesn't alter how this behaive;
-    
+
+# Explain how to read and write a file using JavaScript?
+   readFile(path, optional, callback)
+# Explain how to read and write a file using JavaScript?
+   writeFile(path, data,callback)
+
+# What is called Variable typing in JavaScript?
+ type of variable used for store a number but using the same variable assign to string.
+   let var = 28;
+   var = 'sanjay';
+
+# What is hoisting in JavaScript?
+  nameVariable()
+  console.log(x)
+  var x = 7;
+ function nameVariable(){
+   console.log('nameste javascript');
+ }
+ Hoisting enable us to extract function and varaible even before initializing value without getting error, this is possible bsc of memory allocation and Execulation context;
+
+# Memoization :- 
+ memorised outer func call even outer func has executed, used for recursive or repitive task with same input;
+
+function outer (){
+   let count = 0;
+   function inner(){
+     count++;
+     console.log(count)
+   }
+}
+
+outer()
+couter()
+
+# Data Hiding and Encapsulation:
+class Person {
+  // private 
+  #name;
+
+  constructor(name){
+    this.#name = name;
+   }
+
+   getName(name){
+     return this.#name;
+   }
+
+}
+
+const person = new Person('Sanjay')
+console.log(person.getName());
+console.log(person.name) // undefine
+   
 Nodejs
 1. what is nodejs
 Its a cross platform javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture. opensourch.
@@ -280,7 +332,8 @@ myAccount.currBalance();
 
 # Function Currying
 Currying is a technique in function programing where function is transfer into sequnce of nested function and where each function carrying single arugment; 
-
+// currying used in js complex function call breaking down into smaller,more manageable steps. it transform a func with multiple argument into a series of func each taking a single
+argument.
 function curryAdd(a){
    return function a(b){
       return function b(c){

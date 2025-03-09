@@ -102,6 +102,29 @@ Non-Primitives
  :- this define the currect execuation context; unlike other objects has own properties function also has own properties if this keyword is declear inside func it will change depend upon 
    how function is define or how it is envoked or default execution context; 
 
+# What is HOF (higer order func)
+a function which can take onther func (one or more) as argument or return func result of it; Its enable function programing pattern;
+ex:- Map, filter, take function as argument and return result of it; 
+
+# What is lexical scope in JavaScript?
+let outer = 'I am outside!!';
+function inner(){
+  console.log(outer)
+}
+inner()
+
+Lexical scopes: variable are refers the way variable are 
+
+# how  this keyword work in lexical scope in js;
+const obj = {
+  name:'Javascript';
+  greet: function(){
+    console.log(`Welcome ${this.name}`)
+  }
+}
+
+obj.greet();
+ Here in lexical scope this refered as object bcs function is called as methods; Lexical scope affect variable looksup but doesn't alter how this behaive;
     
 Nodejs
 1. what is nodejs

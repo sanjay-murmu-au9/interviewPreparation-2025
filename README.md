@@ -89,6 +89,19 @@ Non-Primitives
 # NAN functions(Not A Number) :-
  :- It determined weather passed value is NOT A NUMBER and return true false; its types is Number
 
+ # waht is null;
+ It means that no value or obj has been assigned to it;
+
+ # different b/w undefined or null
+ intensionaly declare as null where else unintialize value;
+
+ # prompt box
+ :- its  a dialog box with an optional box if users want to enter any text;
+
+ # this keyword in js
+ :- this define the currect execuation context; unlike other objects has own properties function also has own properties if this keyword is declear inside func it will change depend upon 
+   how function is define or how it is envoked or default execution context; 
+
     
 Nodejs
 1. what is nodejs

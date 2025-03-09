@@ -73,13 +73,29 @@ IndexedDB & LocalStorage Optimization
 Clipboard API
 File API & Drag and Drop
 
+# types of javscripts: 7
+Primitives data types
+ 1. Number
+ 2. boolean
+ 3. string
+ 4. null
+ 5. undefined
+ 6. bigInt
+ 7. symbol
+Non-Primitives
+ 1. Object
+ 2. Array
 
+# NAN functions(Not A Number) :-
+ :- It determined weather passed value is NOT A NUMBER and return true false; its types is Number
+
+    
 Nodejs
 1. what is nodejs
 Its a cross platform javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture. opensourch.
 
 2. How is Node.js different from JavaScript in the browser?
-:- Js:- run in browser, Can access: access to local storage,DOM & uses: UI intraction
+:- Js:- run in browser, Can access: access to local storage,DOM & uses: UI intraction, client side scripting language
  Nodejs: run outside the browser on server, can access:- local file OS access to databases Uses:- 
 
 3. What is NPM

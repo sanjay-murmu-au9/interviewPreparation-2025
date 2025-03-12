@@ -89,7 +89,7 @@ Non-Primitives
 # NAN functions(Not A Number) :-
  :- It determined weather passed value is NOT A NUMBER and return true false; its types is Number
 
- # waht is null;
+ # what is null;
  It means that no value or obj has been assigned to it;
 
  # different b/w undefined or null

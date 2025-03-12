@@ -86,6 +86,9 @@ Non-Primitives
  1. Object
  2. Array
 
+# what is function:
+ building block of any programing language;
+
 # NAN functions(Not A Number) :-
  :- It determined weather passed value is NOT A NUMBER and return true false; its types is Number
 
@@ -147,7 +150,7 @@ obj.greet();
 
 # Memoization :- 
  memorised outer func call even outer func has executed, used for recursive or repitive task with same input;
-
+:- Memoization is used for speeding up application up application by cache the result of expensive function call and reduce the processing time when same input is provide in the future.
 function outer (){
    let count = 0;
    function inner(){

@@ -14,3 +14,11 @@ or
 Why it is Important?
   :- Workinging with large E-commerce platform and product catalog present millions fof items withoud finding a product by name would scan intire tables
 which would be inefficient. search index provide faster looksup and enhences user experiece by deliverying quick reasult;
+
+
+# How Does a B-Tree Index Work?
+Its one of the common used indexes in datasets to keep search operation fast;
+1. in store data in balance tree structure that allow logarithmic time complexity (Olog n ) data structure 
+2. when search for a key its search from root to the  leaf.
+
+# Explain the Differences Between a Full-Text Index and a Regular Index

@@ -8,6 +8,8 @@ SYSTEM DESIGN QUESTION:-
 
 # Search Indexes
  Indexing:- Its a Data strucuture that help in speed of data retriving in most optimised way in database, search engine;
+or 
+(reduces the time complexity of looksup instead of full scan; seach index allow you to get effecient retrival of record; ensure scalibilty in application with large dataset)
 
 Why it is Important?
   :- Workinging with large E-commerce platform and product catalog present millions fof items withoud finding a product by name would scan intire tables

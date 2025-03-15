@@ -162,6 +162,15 @@ function outer (){
 outer()
 couter()
 
+function fib(n,memo = {}){
+    if(n in memo) return memo[n];
+    if(n <= 1) return n; // base point
+    memo[n] = fib(n-1,memo) + fib(n-2,memo);
+    return memo[n];
+}
+
+console.log(fib(10))
+
 # Data Hiding and Encapsulation:
 class Person {
   // private 
@@ -180,6 +189,15 @@ class Person {
 const person = new Person('Sanjay')
 console.log(person.getName());
 console.log(person.name) // undefine
+
+Q7: Advantage of Closure?
+ 1. module design pattern
+ 2. currying
+ 3. memoization
+ 4. setTimeout
+ 5. data Encapsulation etc
+
+
    
 Nodejs
 1. what is nodejs

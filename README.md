@@ -32,7 +32,10 @@ and partial keyword match; eg long form of blog app;
 How Would You Handle Index Maintenance in a System with Frequent Writes?
 :- Indexes maintaince could be expensive for frequently write-heavy app; and can slow down for insertion 
 so I would consider reduce the no of indexes or looks for the indexes strategy that support fast write such as partition indexes Or
-differing indexes in batch jobs;
+differing indexes updates in batch jobs;
+
+# How Do Inverted Indexes Work in Search Engines?
+
 
 
 

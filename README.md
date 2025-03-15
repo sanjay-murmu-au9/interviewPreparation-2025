@@ -35,7 +35,13 @@ so I would consider reduce the no of indexes or looks for the indexes strategy t
 differing indexes updates in batch jobs;
 
 # How Do Inverted Indexes Work in Search Engines?
+:- used in full-text search eg onine library for books search; based on spefic keyword content particular time; 
+Inverted indexes:- map each word or term to a list of document or location where the term appears; this appears of efficent lookups when search by a keywords.
 
+# What Strategies Would You Use to Optimize Query Performance with Indexes?
+:- first of all Need to analyze the queries  patterns and create composite indexes on the most common queries column; also and use covering indexw whereever appropriate,
+ensuring the index contain all the column required by the query.
+lastly Monitor periodically review and rebuild to reduce fragmentation;
 
 
 

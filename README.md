@@ -28,3 +28,31 @@ and partial keyword match; eg long form of blog app;
 
 # When Would You Use a Hash Index, and What Are Its Limitations?
 :- used for quick lookups based on exact matched keyword; however it doesn't range queries and partial match which is good B tres indexes;
+
+How Would You Handle Index Maintenance in a System with Frequent Writes?
+:- Indexes maintaince could be expensive for frequently write-heavy app; and can slow down for insertion 
+so I would consider reduce the no of indexes or looks for the indexes strategy that support fast write such as partition indexes Or
+differing indexes in batch jobs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

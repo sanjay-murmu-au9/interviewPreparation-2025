@@ -16,11 +16,15 @@ Why it is Important?
 which would be inefficient. search index provide faster looksup and enhences user experiece by deliverying quick reasult;
 
 
-# How Does a B-Tree Index Work?
+# How Does a B-Tree Index Work(Regular Index)?
 Its one of the common used indexes in datasets to keep search operation fast;
 1. in store data in balance tree structure that allow logarithmic time complexity (Olog n ) data structure 
-2. when search for a key its search from root to the  leaf.
+2. when search for a key its search from root to the  leaf.which make efficient for large datasets;
 
 # Explain the Differences Between a Full-Text Index and a Regular Index
-:- FTIndex:- is used by blog app;
-:- Regular search Index is for 
+:- FTIndex:- is used for text heavy database such as document storage system, it tokenize the text adnd enable key based search & also has advance feature like relevance ranking
+and partial keyword match; eg long form of blog app; 
+:- Regular search Index work well for strucutred data and exact match
+
+# When Would You Use a Hash Index, and What Are Its Limitations?
+:- used for quick lookups based on exact matched keyword; however it doesn't range queries and partial match which is good B tres indexes;

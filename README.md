@@ -234,7 +234,7 @@ setTimeout(()=>{
 console.log("end task!!!")
 
 6. What are Callbacks, Promises, and Async/Await in Node.js?
- callBack :- func pass as arguments eg:- fs.readFile(file,callback)
+ callBack :- func are pass as arguments to another func and will executed after the complication of async task eg:- fs.readFile(file,callback)
  Promises:- handle async task :- fetch().then().catch()
  Async/Await:- Clear way to handle Promise; Eg: await fetch
 
@@ -247,6 +247,7 @@ example for the above
 
  // Promise
  const fechdata().then(res=>{console.log('done!!')}).catch('error')
+ :- its a plcaeHolder for an obj untill it receive data from async operation either resolve, or reject;
 
  // async await
  const fetchData = async() =>{
@@ -428,6 +429,23 @@ function searchQuery(){
 
 const debounceSearch = debounce(searchQuery,5000)
 
+# What is async function and how it is different from normal function?
+:- async function will always return promise even string is return from func;
+ Normal function will return any data types including promises but it doesn't return automatically;
+
+//async
+async function x(){
+  return "Nameste Javascript"
+}
+const dataPromise = x()
+console.log(dataPromise) // promise { Nameste Javascript }
+
+//❓How to extract data from above promise? One way is using promise .then
+dataPromise.then(res => console.log(res)); // Namaste JavaScript
+
+#What makes async-await special?
+:- code readibility and error handling using try catch
+:- ovide callback hell
 
 # interviewPreparation-2025
 

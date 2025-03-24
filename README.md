@@ -72,6 +72,7 @@ BroadcastChannel API
 IndexedDB & LocalStorage Optimization
 Clipboard API
 File API & Drag and Drop
+diff b/w splice and slice
 
 # types of javscripts: 7
 Primitives data types
@@ -197,7 +198,10 @@ Q7: Advantage of Closure?
  4. setTimeout
  5. data Encapsulation etc
 
-
+# splice and slice
+  Splice: arr.splice(add,rem,replace) modify the original arr by adding,removing and replacing elem;
+Slice: extract the portion of arr are return new arr without modify original arr;
+ 
    
 Nodejs
 1. what is nodejs

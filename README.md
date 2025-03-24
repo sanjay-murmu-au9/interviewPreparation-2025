@@ -266,6 +266,43 @@ uniq = [new Set(names)]
   console.log(obj) // name:"sanjay",age:25 // only
 
 # What is the difference between .call(), .apply(), and .bind()?
+ Call method attaches this func and executes the function imediately;
+ let person = {
+  name:"Sanjay Murmu",
+  greet : function(thing){
+       console.log(this.name + "says hello " + thing);
+  }
+}
+person.greet("world") // sanjay Murmu says hello world
+person.greet.call({name:"Shaunjay Murmu"},"world") // Shaunjay Murmu says hello world
+
+bind method attaches this into function and it need to be invoked seprarately 
+let person = {
+ name:"sanjay Murmu",
+ greet: function(thing){
+   console.log(this.name + "  says hello " + thing)
+ }
+}
+
+const bindMethod = person.greet.bind({name:"Shaun Jay Murmu"});
+bindMethod('world!') // need to invoked seprately
+
+# Apply methods is similar to call methods but it take array-like obj instead of listing the 
+arguments out, one at a time;
+
+function personContainer() {
+  let person = {
+     name:"sanjay murmu",
+     greet:function () {
+        console.log(this.name + " says hello " + arguments[1])
+     }
+  }
+  person.greet.apply(person, arguments) // here arguments is keywords/syntax
+ }
+
+ personContainer("world","mars"); // sanjay murmu says hello mars
+
+
  
 ############################################## NODE JS ################################    
 # Nodejs

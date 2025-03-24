@@ -200,7 +200,13 @@ Q7: Advantage of Closure?
 
 # splice and slice
   Splice: arr.splice(add,rem,replace) modify the original arr by adding,removing and replacing elem;
+const originalArray = [1, 2, 3, 4, 5];
+const removeElm = originalArray.splice(2,2,'a','b') // 3,4 // (indx,count , item1...itemX) // count and index are optional
+console.log(originalArray) //  // 1,2,a, b, 5;
+
 Slice: extract the portion of arr are return new arr without modify original arr;
+const originalArray = [1, 2, 3, 4, 5];
+const slice = originalArray.slice(2,4) // 3,4
  
    
 Nodejs

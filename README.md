@@ -207,6 +207,13 @@ console.log(originalArray) //  // 1,2,a, b, 5;
 Slice: extract the portion of arr are return new arr without modify original arr;
 const originalArray = [1, 2, 3, 4, 5];
 const slice = originalArray.slice(2,4) // 3,4
+
+# Difference between forEach(), map(), filter(), and reduce() in JavaScript
+  :- each iterate over the arr; but server a diff purpose;
+  forEach(()=>{}) // execute a func in each elem but return undefine;
+  map(()=>{}); // transform each elem and return new arr;
+  filter(()=>{}) // return new arr with elm that passed a condition 
+  reduce ((acc,elm)=>{},0) // return in single val // number, obj, arr etc;
  
    
 Nodejs

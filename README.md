@@ -214,9 +214,61 @@ const slice = originalArray.slice(2,4) // 3,4
   map(()=>{}); // transform each elem and return new arr;
   filter(()=>{}) // return new arr with elm that passed a condition 
   reduce ((acc,elm)=>{},0) // return in single val // number, obj, arr etc;
+
+# How do you remove duplicates from an array?
+ex:- const names = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
+uniq = [new Set(names)]
+ // using filter
+ const uniq = names.filter((item,pos)=>  { 
+    return names.indexOf(item) == pos 
+ }) // [ 'Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Carl' ]
+
+ //using lib;
+ let result = [];
+ names.forEach((item)=>{
+  if(result.indexOf(item) < 0){
+      result.push(item);
+   }
+ })
+ console.log(result) // [ 'Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Carl' ]
+ What is the difference between synchronous and asynchronous programming?
+ Sync: - code run line by line
+      :- each task block execution until it finishes
+      :- performance wise slower eg reading APIS
+      :- use Case:- Simple scripts, calculations
+ ASYNC :- code does not wait for task to complete,it move to next task
+       :- code run in the background without blocking;
+       :- faster for handling multiple tasks at once
+       use Case:- API calls, file I/O, databases queries, user intractions
+
+ # How do you deep copy an object in JavaScript?
+  :- with JSON.parse(JSON.stringify(obj)) // stack overflow
+  :- Object.assign({},obj) // stack overflow
+  Modern js  
+  let obj = {name:"sanjay",details:"age":25,city:"delhi"}
+  let deepCopy = structuredClone(obj) // will create new obj recursively copying all nested obj   and arr; 
+  # How do you compare two objects in JavaScript?
+   var user1 = {name : "nerd", org: "dev"};
+   var user2 = {name : "nerd", org: "dev"};
+ console.log(JSON.stringify(user1) === JSON.stringify(user2)) // true
+
+# What is the difference between Object.freeze() and Object.seal()?
+ Object.seal : Can modify but can't add/delete;
+  let obj = {name:"sanjay",age:25};
+  Object.seal(obj)
+  obj.sanjay = 27;
+  console.log(obj) // name: 'sanjay',age: 27;
+  
+ : Object.freeze: completely lock
+ let obj = {name:"sanjay",age: 25}
+ Object.freeze(obj)
+  obj.age = 28; 
+  console.log(obj) // name:"sanjay",age:25 // only
+
+# What is the difference between .call(), .apply(), and .bind()?
  
-   
-Nodejs
+############################################## NODE JS ################################    
+# Nodejs
 1. what is nodejs
 Its a cross platform javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture. opensourch.
 

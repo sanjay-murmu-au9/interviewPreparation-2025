@@ -302,8 +302,27 @@ function personContainer() {
 
  personContainer("world","mars"); // sanjay murmu says hello mars
 
+# How do you convert a string to a number in JavaScript?
+ :- let n = "10"
+   let convertednum = parseInt(n) // +n; // 10;
+# How do you check if a value is NaN?
+// Number.isNaN() most reliable way to check 
+Number.isNaN(NaN) // true
+Number.isNaN(10) // false
+Number.isNaN(undefined); false
+Number.isNaN(null); // false
 
- 
+# What is the difference between parseInt() and parseFloat()?
+ both are used to convert string into number but they return differently;
+parseInt :- ingore decimal val, return NaN if no val found
+parseFloat:- return exact precision, keeps decimal val if present, if no val found return NaN;
+
+#  How do you find the largest number in an array?
+let arr = [1,2,4,5,3,7,0]
+
+# What is the difference between some() and every()?
+
+
 ############################################## NODE JS ################################    
 # Nodejs
 1. what is nodejs

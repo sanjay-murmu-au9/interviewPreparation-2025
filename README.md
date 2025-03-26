@@ -321,6 +321,200 @@ parseFloat:- return exact precision, keeps decimal val if present, if no val fou
 let arr = [1,2,4,5,3,7,0]
 
 # What is the difference between some() and every()?
+// let numbers = [10, 25, 30, 40];
+// const hasSmallVal = numbers.some((val)=> val < 20) // true
+// console.log(hasSmallVal)
+// let arr = [1,2,34,[1]]
+// console.log(arr.flat())
+// new key  is for checking intance the class methods or contructor;
+// console.log([],instanceof Array)
+
+// shallow copies : copies only top level and nested object share references
+// deep copies : recursively copies all properties as well nested are fully cloned.
+
+// windows: represent the browser window : Represent the webpage(DOM) servers side
+
+// intermediate queestions
+// Promises will return :represet future values "resolve or reject"
+    // const promise = new Promise((res,rej)=>{
+    //     setTimeout(()=> resolve("Done"),2000)
+    // });
+// async awiat: is a syntactic sugar over promises to handle  sync code more clearly;
+// async function x(){
+//     const data = await fetch("https://api.example.com");
+//     return data.json();
+// }
+// Error handle in async await
+    // using try catch to handle promise rehections;
+    // async function x(){
+    //     try{
+    //      const res = await fetch('http://example.com');
+    //      return res.json();
+    //     }catch(err){
+    //         console.log(err)
+    //     }
+    // }
+    
+// map(). return new arr with transformed values;
+// forEach iterate over the existing arr but does not return new val;
+// const arr = [1,2,3]
+// const transVal = arr.map((elm)=> elm * 2) // 1,4,6
+// arr.forEach(elm => console.log(elm * 2));
+
+// fetch APis "modern" is for used for HTTP req;
+// fetch("http://api.example.com")
+// .then(res => res.json())
+// .then(res => console.log(data))
+
+//  generator func: - can pause function execuation using yield and resume late;
+    // function* myGenerator(){
+    //     yield "hello";
+    //     yield "world";
+    // }
+    // let gen = myGenerator();
+    // console.log(gen.next().value);
+    
+// module :- used to  split js code into reusable files using import and export;
+//file 1 export function x (){console.log(x)
+
+// file 2 import {x} from './files.js';
+// x()
+
+
+// // deafult exports is for single file where else named export is for multiple file with {};
+
+//  Class Person {
+    //   constructor(name){
+            // this.name = name;
+    //     }
+    //   greet(){
+    //       console.log(`Hello, ${this.name}`)
+    //   }
+    //  }
+    
+//  const person = new Person();
+// person.greet()
+
+// Propotyypes Inheritance: used for obj inherits via protypes;
+// const obj = {a:10}
+// const newObj = Object.create(obj)
+// console.log(newObj.a) // 10; inheriated
+
+// super is used while extends base/parent class's constructor or method;
+
+// class Parent {
+//     greet(){console.log("Hello from parent")}
+// }
+
+// class Child extends Parent {
+//     greet(){
+//         super.greet()
+//         console.log('Hellow from child!!')
+//     }
+// }
+
+// const child = new Child();
+// child.greet()
+
+// different b/w Object.create: create an obj with prototype.
+// new is for call constructor func to create an obj;
+
+// destructure: {name } = { name : 'Sanjay', age:27 }
+// console.log(name) // Sanjay
+
+// rest operator:{...} collects multiple values into an array.
+// function x (...nums){
+//     return nums.reduce((a,b)=> a + b, 0)
+// }
+// console.log(x(1,2,3))
+
+// spread opertor expends an array into individual elem;
+
+// const arr = [1,2,3,4,]
+// const ar2 = [...arr,5,6]
+// arr.push(12)
+// console.log(arr,"arr", ar2)
+
+// let a = 5, b = 10;
+// [a,b] = [b,a];
+// console.log(a,b) // 10,5
+
+// different b/w 
+//Object.entries(): return [key, value] pairs.
+//.Object.keys // return keys
+// Object.values() // return values
+
+
+//weakMap: used to store key - value pairs where keys are obj (weakly held);
+// weakSet; store unique obj (weakly held);
+
+// how to merge two obj in js
+// let obj1 = {
+//     firstname:"sanjay"
+// }
+// let obj2 = {
+//     lastname:"Murmu"
+// }
+
+// let a_obj = {...obj1,...obj2}
+// console.log(a_obj)
+
+// Symbol data types:  unique and immitable primitives properties;
+// let id = Symbol('id');
+// let user = {[id]:123};
+// console.log(user)
+
+// tagged temp literals:
+// custom parsing of template literals
+// function tag(str,val){
+//     return `${str[0]} ${val}!`;
+// }
+
+// console.log(tag`Hello ${"sanjay"}`); // remove ()
+
+
+// mutable:-obj or arr that can be changes (eg: obj, arr).
+// immutable: can't be changed(e.g: string,numbers)
+
+//function constructor: used to declare variable
+
+// memoization:- used as an redis cache to improve performance.
+// function fib(n,memo={}){
+//     if(n in memo) return memo[n];
+//     if(n <= 1) return n;
+//     memo[n] = fib(n-1,memo) + fib(n-2 + memo);
+//     return  memo[n];
+// }
+
+// console.log(fib(10))
+
+
+
+// HOF:- map, filter, forEach, reduce
+// iterate over obj:- for in loop
+// for(let key in obj){
+    
+// }
+
+//polyfill in js:-
+
+// even loop in js:- Handles async operations by pushing task from queue to the call stack.
+
+// microtasks queue:- higher priority (promise.then())
+// macrotasks queue : Lower priority // setTimeout()
+
+// setTimeout(0) ; execuate after all synchronous code, as a macrotask in the event loop.
+//Throttling :- limit how often a func execution in a given time;
+
+// callback func: pass as an argument to another func as an arguments and return resrult once done;
+
+// currying:- series of func arg pass exactly one arg 
+
+// Proxy: is an obj wrap another obj and intercepts operations like getting,setting,or deleting properties.
+
+// localStorage : data remain permanently untill cleared.
+// sessionStorage:- store data only for a session once tab closed delete;
+// cookies: - small data stored with expiration with HTTP requests;
 
 
 ############################################## NODE JS ################################    

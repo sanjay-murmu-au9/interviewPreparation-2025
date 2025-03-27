@@ -748,6 +748,9 @@ function searchQuery(){
 
 const debounceSearch = debounce(searchQuery,5000)
 
+#  Asynchronous JavaScript
+ :allow non blocking opertion to execuate while enabling other task continue execuation with waiting for  eg API call, file operation etc.
+
 # What is async function and how it is different from normal function?
 :- async function will always return promise even string is return from func;
  Normal function will return any data types including promises but it doesn't return automatically;

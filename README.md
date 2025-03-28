@@ -516,6 +516,8 @@ let arr = [1,2,4,5,3,7,0]
 // sessionStorage:- store data only for a session once tab closed delete;
 // cookies: - small data stored with expiration with HTTP requests;
 
+# bodyParser:- Its a npm packages Its responsible for parsing incoming bodies  in a middleware before you handle it; handle for form submition;
+
 
 ############################################## NODE JS ################################    
 # Nodejs

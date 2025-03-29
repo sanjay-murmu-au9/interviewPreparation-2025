@@ -107,7 +107,7 @@ Non-Primitives
    how function is define or how it is envoked or default execution context; 
 
 # What is HOF (higer order func)
-a function which can take onther func (one or more) as argument or return func result of it; Its enable function programing pattern;
+a function which can take anther func (one or more) as argument or return func result of it; Its enable function programing pattern;
 ex:- Map, filter, take function as argument and return result of it; 
 
 # What is lexical scope in JavaScript?
@@ -428,7 +428,7 @@ let arr = [1,2,4,5,3,7,0]
 // }
 // console.log(x(1,2,3))
 
-// spread opertor expends an array into individual elem;
+// spread operator expends an array into individual elem;
 
 // const arr = [1,2,3,4,]
 // const ar2 = [...arr,5,6]
@@ -498,7 +498,7 @@ let arr = [1,2,4,5,3,7,0]
 
 //polyfill in js:-
 
-// even loop in js:- Handles async operations by pushing task from queue to the call stack.
+// event loop in js:- Handles async operations by pushing task from queue to the call stack.
 
 // microtasks queue:- higher priority (promise.then())
 // macrotasks queue : Lower priority // setTimeout()
@@ -608,13 +608,20 @@ example for the above
   })
 
 10. What are Streams in Node.js?
- :- Streams handle data in chunk to improve performances;
+ :- Streams handle data in chunk ratheer then loading entire at once which is best for memory usage and performances;
 Example:
  const fs = require('fs')
  const readStream = fs.createReadStream('file.txt','utf8');
  readStram.on('data',(chunk)=> {
    console.log('new Chunck:',chunk);
-  })
+  });
+
+# Type of stream 
+1. Writable
+2. Readable
+3. Duplix
+4. Transform
+
  3. What is closure?
     :-A closure is a func that remember the variable from its outer scope, event after the outer func has finished executing.
     eg :-
@@ -674,19 +681,16 @@ myAccount.currBalance();
 
 
 # Function Currying
-Currying is a technique in function programing where function is transfer into sequnce of nested function and where each function carrying single arugment; 
 // currying used in js complex function call breaking down into smaller,more manageable steps. it transform a func with multiple argument into a series of func each taking a single
 argument.
-function curryAdd(a){
-   return function a(b){
-      return function b(c){
-        return a+b+c
-       }
-   }
-}
+const add = a => b => a+b;
+console.log(add(5)(4));
 
-console.log(curryAdd(1)(2)(3))
-
+# advantage:
+ 1. hepls in create HOF;
+ 2. It reduces the changes of error in our func by dividing it into multiple smaller func that can handle one responsibility.
+ 3. Used for building modular and reusable code
+ 4. code more readable;
 
 # Function Composition 
 Its a technique in function programing where multiple function are combined to form /create new function

@@ -119,7 +119,7 @@ inner()
 
 Lexical scopes: variable are refers the way variable are 
 
-# how  this keyword work in lexical scope in js;
+# how this keyword work in lexical scope in js;
 const obj = {
   name:'Javascript';
   greet: function(){
@@ -154,18 +154,19 @@ obj.greet();
 :- Memoization is used for speeding up application up application by cache the result of expensive function call and reduce the processing time when same input is provide in the future.
 function outer (){
    let count = 0;
-   function inner(){
+   return function inner(){
      count++;
      console.log(count)
    }
 }
 
-outer()
-couter()
+const increament = outer()
+increament() // 1
+increament() // 2
 
 function fib(n,memo = {}){
-    if(n in memo) return memo[n];
-    if(n <= 1) return n; // base point
+    if(n in memo) return memo[n]; // checking if allready computed
+    if(n <= 1) return n; // base point 
     memo[n] = fib(n-1,memo) + fib(n-2,memo);
     return memo[n];
 }

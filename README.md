@@ -210,7 +210,7 @@ const originalArray = [1, 2, 3, 4, 5];
 const slice = originalArray.slice(2,4) // 3,4
 
 # Difference between forEach(), map(), filter(), and reduce() in JavaScript
-  :- each iterate over the arr; but server a diff purpose;
+  :- each iterate over the arr; but serve a diff purpose;
   forEach(()=>{}) // execute a func in each elem but return undefine;
   map(()=>{}); // transform each elem and return new arr;
   filter(()=>{}) // return new arr with elm that passed a condition 
@@ -340,7 +340,7 @@ let arr = [1,2,4,5,3,7,0]
     // const promise = new Promise((res,rej)=>{
     //     setTimeout(()=> resolve("Done"),2000)
     // });
-// async awiat: is a syntactic sugar over promises to handle  sync code more clearly;
+// async await: is a syntactic sugar over promises to handle  sync code more clearly;
 // async function x(){
 //     const data = await fetch("https://api.example.com");
 //     return data.json();
@@ -348,7 +348,7 @@ let arr = [1,2,4,5,3,7,0]
 // Error handle in async await
     // using try catch to handle promise rehections;
     // async function x(){
-    //     try{
+    //     try {
     //      const res = await fetch('http://example.com');
     //      return res.json();
     //     }catch(err){
@@ -507,7 +507,7 @@ let arr = [1,2,4,5,3,7,0]
 // setTimeout(0) ; execuate after all synchronous code, as a macrotask in the event loop.
 //Throttling :- limit how often a func execution in a given time;
 
-// callback func: pass as an argument to another func as an arguments and return resrult once done;
+// callback func: pass as an argument to another func as an arguments and return result once done;
 
 // currying:- series of func arg pass exactly one arg 
 

@@ -545,7 +545,7 @@ Its a cross platform javascript run time, run outside the browser build on v8 ch
 
 
  5. What is the Event Loop in Node.js?
-  :- Event loop allow nodejs handle mutliple request async without blocking the main thread.
+  :- Event loop allow nodejs to handle mutliple request async without blocking the main thread.
 
 //none blocking example
 console.log('start')
@@ -776,7 +776,56 @@ dataPromise.then(res => console.log(res)); // Namaste JavaScript
 :- code readibility and error handling using try catch
 :- ovide callback hell
 
+
+# what in process.next.Tick()
+ : it run as soon as the currect execution complete; but before the event loop countinue
+console.log('start')
+process.nextTick(()=>{
+ console.log('Inside nextTick')
+})
+console.log('end')
+
+# setImmediate()
+: its run after i/o event when in the check phase in the current loop
+let start = "start";
+setImmediate(()=>{
+ console.log("run set Immediate")
+})
+
+console.log("End")
+output:
+ start
+ end
+ run  set Immediate
+
+# setTimeout(fn,0)
+: run after minimun delay in the timer phase; schedule something after a minimum delay;
+
 # interviewPreparation-2025
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("setTimeout");
+}, 0);
+
+setImmediate(() => {
+  console.log("setImmediate");
+});
+
+process.nextTick(() => {
+  console.log("nextTick");
+});
+
+console.log("End");
+
+// Start
+// End
+// nextTick //always runs before other async callbacks.
+//setTimeout
+//setImmediate 
+# setTimeout and setImmediate may swap depending on the system, but generally, setTimeout goes first when both are in the main script.
+
 
 SYSTEM DESIGN QUESTION:-
   Stangler Design Pattern:- break into small parts and ship from monolathic to microservices 

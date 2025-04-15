@@ -831,3 +831,68 @@ SYSTEM DESIGN QUESTION:-
   Stangler Design Pattern:- break into small parts and ship from monolathic to microservices 
   ex:- Restraunt : planing to create new kitchen and start cooking it start from single item once that ship well then gradually other items will 
   be cook there.
+
+HLD :- High Level design
+main components that would be develop for the resulting product
+
+LLD:- Low level Design
+Desing for each elem mentioned in the High - level Design of the system
+classes, interfaces,relationship b/w class and actual logic of the various components
+
+Monolithic architure:-(internal design):- single codebase/same repo;
+bcs:- lesss complexity, easier to understand,high productivity also known as centralised system so it require less network calls as compare to other arch;
+
+Disadvantages:-
+1. if error or bug it can destroy the complete system;
+2. If single module updated whole system neeed to be updated to reflect changes;
+3. If module programming language or framework changed entire system need to be changed;
+
+website:- blog:- only read
+webApplication:- write + read
+
+# Distributed system:-
+collection of multiple individual system connected through a network that share resources,communicate and coordinate to achieve common goal
+
+Advantage:-
+1. scalable
+2. No single point of failure
+3. low latency;
+
+disAdvantage:-
+1. Complex
+2. Manage resources
+3. difficult to secure
+4. message might be lost in b/w nodes
+
+# Latency: network delay + computation delay ;
+how to reduce latency:- by using 1. caching,:- store info for a set of period of time on a computer.
+2. CDN "Content delivery networks" witch is distrubuted network of proxy servers obj is to serve content to users more quickly;
+
+# Throughput:- vol of work through a system / per sec; measure in bps bits per sec;
+how to improve :-
+ 1. using CDN
+ 2. caching
+ 3. distributed system
+ 4. load balancer
+ 5. improve resources
+
+# Availability:-
+
+Replication:-Include redundancy but involves copying of data from one node to another
+or the synchronization of the state b/w nodes;
+
+# Redundancy:-duplication of nodes in case of some of them are failing
+
+# Consistency:- When more then one client req the system,for all such req it will be called consistent when each client get the same data, the data should be consistent,regardless of who is accessing it.
+
+types of consistency
+1. Strong Consistency
+  :- When system doesn't allow read operation untill all the nodes with replicated data are updated ;
+2. Eventual Consitency:-reads are not halted till all the replicas are updated rather
+the update process is eventual. some user might receive old data but eventually all the data is updated to the latest data;
+3. Weak Consistency: No consistency within the nodes
+
+
+
+
+

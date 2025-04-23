@@ -832,10 +832,10 @@ SYSTEM DESIGN QUESTION:-
   ex:- Restraunt : planing to create new kitchen and start cooking it start from single item once that ship well then gradually other items will 
   be cook there.
 
-HLD :- High Level design
+# 1. HLD :- High Level design
 main components that would be develop for the resulting product
 
-LLD:- Low level Design
+# 2. LLD:- Low level Design
 Desing for each elem mentioned in the High - level Design of the system
 classes, interfaces,relationship b/w class and actual logic of the various components
 
@@ -866,7 +866,7 @@ disAdvantage:-
 
 # Latency: network delay + computation delay ;
 how to reduce latency:- by using 1. caching,:- store info for a set of period of time on a computer.
-2. CDN "Content delivery networks" witch is distrubuted network of proxy servers obj is to serve content to users more quickly;
+2. CDN "Content delivery networks" which is distrubuted network of proxy servers obj is to serve content to users more quickly;
 
 # Throughput:- vol of work through a system / per sec; measure in bps bits per sec;
 how to improve :-
@@ -876,7 +876,12 @@ how to improve :-
  4. load balancer
  5. improve resources
 
-# Availability:-
+# Availability:- eg cbse result website down Make sure website is avaiable all the time like 
+google;
+
+# Where services will be able to get you most availabity;
+ 1. Monolithic Architecture : if server break down all the availibility will goes down; fault Tolerance is directly propertional to availabity;
+ 2. Distributed system:- Most availibity will the there in distributed system bcs if one server fail, repilcate will serve by that time;
 
 Replication:-Include redundancy but involves copying of data from one node to another
 or the synchronization of the state b/w nodes;
@@ -884,6 +889,11 @@ or the synchronization of the state b/w nodes;
 # Redundancy:-duplication of nodes in case of some of them are failing
 
 # Consistency:- When more then one client req the system,for all such req it will be called consistent when each client get the same data, the data should be consistent,regardless of who is accessing it.
+eg:- movie ticket buys;
+Factor Improving Consistency:
+ 1. Improve Network bandwidth
+ 2.  stop the read operation "untill all db is updated"
+ 3.  Replication based on distance aware strategies;
 
 types of consistency
 1. Strong Consistency
@@ -892,6 +902,16 @@ types of consistency
 the update process is eventual. some user might receive old data but eventually all the data is updated to the latest data;
 3. Weak Consistency: No consistency within the nodes
 
+# CAP Theorem :- for a distributed System the CAP Theorem state that it is possible to attain only two properties and the third would be compromised.
+C:- consistence
+A:- Availability
+P: Partition Tolerance (most importance) :- distributor server  
+here:-CAP theorm is only allowed either CP or AP Not CA bcs Partion Tolerance is important in distributor server;
+
+# What is Lamport Clock:- TO check time zone eg if we have three server in different time zone
+to get exact time data update it is measure using lamport clock;
+
+# Scalability:-
 
 
 

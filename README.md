@@ -119,7 +119,7 @@ inner()
 
 Lexical scopes: variable are refers the way variable are 
 
-# how this keyword work in lexical scope in js;
+# how "this" keyword work in lexical scope in js;
 const obj = {
   name:'Javascript';
   greet: function(){
@@ -609,7 +609,7 @@ example for the above
   })
 
 10. What are Streams in Node.js?
- :- Streams handle data in chunk ratheer then loading entire at once which is best for memory usage and performances;
+ :- Streams handle data in chunk rather then loading entire at once which is best for memory usage and performances;
 Example:
  const fs = require('fs')
  const readStream = fs.createReadStream('file.txt','utf8');
@@ -622,6 +622,13 @@ Example:
 2. Readable
 3. Duplix
 4. Transform
+
+# What is Spawn and fork
+both are used for child processess but they serve differnent purpose;
+Spawn:- is a command used for run system command does, which will run on its own process;
+Fork: Its a special instance of Spawn, it run a fresh instance of v8 engine,where once can create multiple worker node in the same node code;
+Mostly used for creating worker pool;
+
 
  3. What is closure?
     :-A closure is a func that remember the variable from its outer scope, event after the outer func has finished executing.
@@ -836,7 +843,7 @@ HLD :- High Level design
 main components that would be develop for the resulting product
 
 LLD:- Low level Design
-Desing for each elem mentioned in the High - level Design of the system
+Designing for each elem mentioned in the High - level Design of the system
 classes, interfaces,relationship b/w class and actual logic of the various components
 
 Monolithic architure:-(internal design):- single codebase/same repo;

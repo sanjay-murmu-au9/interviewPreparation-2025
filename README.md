@@ -609,7 +609,7 @@ example for the above
   })
 
 10. What are Streams in Node.js?
- :- Streams handle data in chunk ratheer then loading entire at once which is best for memory usage and performances;
+ :- Streams handle data in chunk rathar then loading entire at once which is best for memory usage and performances;
 Example:
  const fs = require('fs')
  const readStream = fs.createReadStream('file.txt','utf8');

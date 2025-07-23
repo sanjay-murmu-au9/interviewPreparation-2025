@@ -555,6 +555,9 @@ setTimeout(()=>{
 
 console.log("end task!!!")
 
+# what is the process of libuv?
+:- its handle the event loop and threads pool for I/O operation
+
 6. What are Callbacks, Promises, and Async/Await in Node.js?
  callBack :- func are pass as arguments to another func and will executed after the complication of async task eg:- fs.readFile(file,callback)
  Promises:- handle async task :- fetch().then().catch()
@@ -786,7 +789,7 @@ process.nextTick(()=>{
 console.log('end')
 
 # setImmediate()
-: its run after i/o event when in the check phase in the current loop
+: it run after current execution complete, event when in the check phase in the current loop
 let start = "start";
 setImmediate(()=>{
  console.log("run set Immediate")
@@ -913,6 +916,80 @@ to get exact time data update it is measure using lamport clock;
 
 # Scalability:-
 
+# Top PostgreSQL Interview queston with answers
+1. what is PostgreSQL:-
+Ans:- Ist Free, open source, relational database, support SQL and advance feature like JSON, Indexing, text-base-search;
+2. Different b/w PostgreSQL and SQL
+   PostgresSQL is a database its support SQL to intract with data
+   SQL is a Structured Query Language
+
+3. Table
+   CREATE TABLE users(
+    id serial PRIMARY KEY
+    name TEXT,
+    email: TEXT UNIQUE
+   )
+
+4. Primary key :- its a column that uniquely Identifies each row in a table.
+5. Foreign Key : Its connect two tables, It ensure data in table matches a value in another table;
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name TEXT IS NOT NULL,
+  email: TEXT
+)
+
+CREATE TABLE orders (
+  id serial PRIMARY KEY,
+  product_name TEXT,
+  user_id INT,
+  FOREIGN KEY (user_id) REFERENCE users(id)
+)
+
+// Insert a user 
+INSERT INTO users(name, email) VALUES ("SANJAY","sanjaymurmu@gmail.com");
+
+--Inser an order for that user
+INSERT INTO orders(product_name) VALUES("Laptop", 1);
+
+# LIMIT 
+select * from users LIMIT 5;
+
+# update data in table
+UPDATE users SET name = "ShaunJay" where id = 1;
+
+# Fetch
+SELECT * FROM users;
+
+# Index in PostgreSQL
+CREATE INDEX idx_email ON users(email);
+
+# Types of Joins in PostgreSQL
+1. LEFT JOIN :- All from the left and only matching rows from right
+2. RIGHT JOIN : All from the right and only matched from left;
+3. INNER JOIN : Only matching rows
+4. FULL JOIN : All rows from sides
+
+SELECT u.username, o.product
+FROM users u
+LEFT JOIN orders o ON u.id = o.user_id;
+
+# RIGHT JOIN
+SELECT u.username,o.product
+FROM users u
+RIGHT JOIN orders ON u.id = o.user_id;
+
+# INNER JOIN 
+SELECT u.name, o.product
+FROM users u
+INNER JOIN oders o ON u.id = o.user_id;
+
+# Full Join
 
 
-
+# Transaction?
+Its a group of operation that run together If one fails all are rolled backed. 
+BEGIN;
+UPDATE users set roll_no = roll_no - 100 where id = 1;
+UPDATE user set roll_no = roll_no + 100 where id = 2;
+COMMIT;

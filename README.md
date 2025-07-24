@@ -74,6 +74,9 @@ Clipboard API
 File API & Drag and Drop
 diff b/w splice and slice
 
+# What is Javascript?
+Its a high level Interpreted programming language used for webpage intractive, It run on the browser clint side (UI) and can run on the server side using nodejs.
+
 # types of javscripts: 7
 Primitives data types
  1. Number
@@ -86,7 +89,7 @@ Primitives data types
 Non-Primitives
  1. Object
  2. Array
-
+ 3. Function
 # what is function:
  building block of any programing language;
 

@@ -234,6 +234,19 @@ uniq = [new Set(names)]
       result.push(item);
    }
  })
+
+function filteredArr(arr) {
+  let filteredresult = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!filteredresult.includes(arr[i])) {
+      filteredresult.push(arr[i]);
+    }
+  }
+  return filteredresult;
+
+}
+console.log(filteredArr(names));
+
  console.log(result) // [ 'Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Carl' ]
  What is the difference between synchronous and asynchronous programming?
  Sync: - code run line by line

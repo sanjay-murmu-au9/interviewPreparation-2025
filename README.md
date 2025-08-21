@@ -73,6 +73,8 @@ IndexedDB & LocalStorage Optimization
 Clipboard API
 File API & Drag and Drop
 diff b/w splice and slice
+Difference Between Hashing and Encryption
+What are the advantages and disadvantages of NodeJS.
 
 # What is Javascript?
 Its a high level Interpreted programming language used for webpage intractive, It run on the browser clint side (UI) and can run on the server side using nodejs.
@@ -211,6 +213,21 @@ console.log(originalArray) //  // 1,2,a, b, 5;
 Slice: extract the portion of arr are return new arr without modify original arr;
 const originalArray = [1, 2, 3, 4, 5];
 const slice = originalArray.slice(2,4) // 3,4
+
+# Hashing:- Its one way function used mainly for authentication like storing password; cannot be reverse
+
+# Encryption:- Two way func used for data transformation using cipherText using a key; can be reversed
+
+# advatanges of Nodejs
+  1. single Language support for both FrendEnd and Backend
+  2. Non Block I/O & event driven
+  3. Huge Eco system
+  4. scalability
+
+# disAdvantages
+  1. CPU intensive Task no Ideal
+  2. immuture or low-quality packages
+  3. Rapid changes 
 
 # Difference between forEach(), map(), filter(), and reduce() in JavaScript
   :- each iterate over the arr; but serve a diff purpose;

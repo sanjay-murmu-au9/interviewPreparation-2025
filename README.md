@@ -556,7 +556,17 @@ let arr = [1,2,4,5,3,7,0]
 ############################################## NODE JS ################################    
 # Nodejs
 1. what is nodejs
-Its a cross platform javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture. opensourch.
+Its a cross platform javascript run time, run outside the browser build on v8 chrome engine, non-blocking, event based architucture. opensourch, optimized for high performance;
+# Use cases:-
+ 1. Data Streaming:-real time stream of audio video;
+ 2. API servers:- Ideal for building fast, scale and data intensive app;
+ 3. Microservices:- Module origited design facilated the development of decoupled, independenly scaleable service;
+ 4. Single Page Application: often used with framework like:- Angular, React;
+
+ # Why NodeJs:-
+ 1. Unified  Language:- Utilized javascript for both FE and BE can be build using single langauge
+ 2. NPM Ecosystem:- NPM repo having large number of  opensources pacakages;
+ 3. Opensource:- Nodejs get huge benefits from community,contributors, update and enhances packages;
 
 2. How is Node.js different from JavaScript in the browser?
 :- Js:- run in browser, Can access: access to local storage,DOM & uses: UI intraction, client side scripting language
@@ -587,6 +597,10 @@ setTimeout(()=>{
 },2000)
 
 console.log("end task!!!")
+
+# How do NodeJs handle child thread
+Nodejs employes Event based architured and non blocking I/O for effieciency;
+while Nodejs has only single main thread, It can harness the full power of multiple core system by launching multiple child threads for specific tasks such as a file compression or image processing;
 
 # what is the process of libuv?
 :- its handle the event loop and threads pool for I/O operation

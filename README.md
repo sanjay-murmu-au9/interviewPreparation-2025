@@ -603,13 +603,13 @@ Nodejs employes Event based architured and non blocking I/O for effieciency;
 while Nodejs has only single main thread, It can harness the full power of multiple core system by launching multiple child threads for specific tasks such as a file compression or image processing;
 
 # Describe the event-driven programming in Node.js.
-:- Nodejs is build on a Event driven, Non blocking I/O model, In this paradigm flow of the program is determine by the **Events** such as user req, file being read, timer expiring;
+:- Nodejs is build on a Event driven program, Non blocking I/O model, In this paradigm flow of the program is determine by the **Events** such as user req, file being read, timer expiring;
 instead of server sitting Idel and blocking a tread while waiting for operation to finished,Nodejs trigger an event moved to next task handle the result once its ready via callback function;
  Four Pillior Core component:-
-  1. Event Emitter:- Object that emits name event (eg http.server emits a req)
+  1. Event Emitter:- Object that emits name event (eg http.server emits a req) // emit=produce
   2. Event:- Unique strings like ('data','success','error') signify something happened;
   3. Event Listerer:- func subscribe to a specific event and execute when the event is fired;
-  4. Event Loop:- constantly Keep checking the queue and execute the listener;
+  4. Event Loop:- Constantly watches the execution stack and checks whether it's clear to execute pending tasks from the Callback Queue.
 
 # what is the process of libuv?
 :- its handle the event loop and threads pool for I/O operation

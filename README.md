@@ -137,6 +137,16 @@ obj.greet();
 
 # Explain how to read and write a file using JavaScript?
    readFile(path, optional, callback)
+
+  const fs = require('fs/promise')
+  async function file(fileName, content){
+    try{
+     const data = await fs.readFile(fileName,'utf'); // for write fs.writeFile(fileName,content,'utf8')
+     console.log(data)
+    }catch(err){
+      console.log(err)
+    }
+  }
 # Explain how to read and write a file using JavaScript?
    writeFile(path, data,callback)
 
@@ -152,7 +162,7 @@ obj.greet();
  function nameVariable(){
    console.log('nameste javascript');
  }
- Hoisting enable us to extract function and varaible even before initializing value without getting error, this is possible bsc of memory allocation and Execulation context;
+ Hoisting enable us to extract function and variable even before initializing value without getting error, this is possible bsc of **memory allocation** and   **Execulation context**;
 
 # Memoization :- 
  memorised outer func call even outer func has executed, used for recursive or repitive task with same input;
